@@ -2,29 +2,50 @@
   "expo": {
     "name": "sleepy",
     "slug": "sleepy",
+    "description": "getting to sleep is hard, we make it easy. Sleepy mobile application is home to sleep podcasts, meditation and relaxing music playlists",
     "version": "1.0.0",
+    "platforms": ["ios", "android"],
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/icon.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#7227D9"
     },
     "assetBundlePatterns": [
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIBackgroundModes": [
+          "audio"
+        ]
+      },
+      "bundleIdentifier": "kksleepyIOS"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.kk25.sleepy"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "e5610bee-e961-4816-859e-554d49095875"
+      }
+    },
+    "owner": "kk25",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/e5610bee-e961-4816-859e-554d49095875"
     }
   }
 }
